@@ -31,7 +31,6 @@ class Clictopay extends PaymentModule
         $this->tab = 'payments_gateways';
         $this->version = '1.3.6';
         $this->author = 'Ala Eddine Khefifi';
-        //$this->controllers = array('ClictopayController', 'validation');
 
         $this->currencies = true;
         $this->currencies_mode = 'checkbox';
@@ -45,7 +44,6 @@ class Clictopay extends PaymentModule
             $this->affilie = $config['affilie'];
         }
 
-        //$this->bootstrap = true;
         parent::__construct();
 
         $this->displayName = 'Clictopay';
