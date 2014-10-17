@@ -1,0 +1,23 @@
+----------------------------------------------------------------------------
+Auteur:        Ala Eddine Khefifi
+Auteur E-Mail: alakhefifi@gmail.com
+Date:          Janvier 2013
+Nom de Module: Nzocartepay
+Version :      1.0
+
+Nzocartepay est un Module de paiement en ligne pour SPS Monétique Tunisie
+TOUS DROITS RÉSERVÉS.
+
+*                     Ala Eddine Khefifi                       *
+
+  
+*                      WWW.OVYNET.COM                          *
+-----------------------------------------------------------------------------
+
+Le Module Nzocartepay est compatible seulement avec v1.5.0 ou ultèrieur de Prestashop
+
+
+URL:
+CONTROLE : http://www.nomdomain.com/index.php?fc=module&module=nzocartepay&controller=mtqcontrol
+SUCCES   : http://localhost:8086/index.php?fc=module&module=nzocartepay&controller=succes
+ECHEC    : http://localhost:8086/index.php?fc=module&module=nzocartepay&controller=echec
