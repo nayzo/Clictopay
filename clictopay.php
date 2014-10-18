@@ -48,7 +48,7 @@ class Clictopay extends PaymentModule
         if (!count(Currency::checkPaymentCurrencies($this->id)))
             $this->warning = $this->l('No currency set for this module');
         if ('localhost' === $_SERVER['SERVER_NAME'])
-            $this->warning = $this->l('Clictopay SMT: The payment cannot be executed on localhost');
+            $this->warning = $this->l('The payment cannot be executed on localhost');
 
     }
 
