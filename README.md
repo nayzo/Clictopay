@@ -1,11 +1,11 @@
 Clictopay SMT
 =====================
 
-**Clictopay SMT** est un Module **Prestashop** de paiement en ligne pour **SPS Monétique Tunisie**.
+**Clictopay SMT** est un module **Prestashop** de paiement en ligne pour **SPS Monétique Tunisie**.
 
 - Le Module est bilingue ``FR`` et ``EN``
 
-- Le Module **Clictopay SMT** est compatible avec la version **v1.5.0** ou ultèrieur de **Prestashop**
+- Le Module est compatible avec la version **v1.5.0** ou ultèrieur de **Prestashop**
 
 - TOUS DROITS RÉSERVÉS. Développé par **Ala Eddine Khefifi**
 
@@ -18,9 +18,9 @@ Installation
 
 2. Décompressez le module et renommez le dossier ``Clictopay-master``  à  ``clictopay``.
 
-3. Placez le dossier ``clictopay`` dans le dossier ``modules`` de votre projet de Prestashop.
+3. Placez le dossier ``clictopay`` dans le dossier ``modules`` de votre projet Prestashop.
 
- Ou compressez (.zip) le dossier renommé et charger le module depuis le back office de Prestashop.
+ Ou compressez (.zip) le dossier renommé et chargez le module depuis le back office de Prestashop.
 
 4. Installez le Module depuis le back office de Prestashop, menu ``Modules``, section ``Paiement``.
 
