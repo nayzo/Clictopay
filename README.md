@@ -20,6 +20,8 @@ Installation
 
 3. Placez le dossier ``clictopay`` dans le dossier ``modules`` de votre projet de Prestashop.
 
+ Ou compressez (.zip) le dossier renommé et charger le module depuis le back office de Prestashop.
+
 4. Installez le Module depuis le back office de Prestashop, menu ``Modules``, section ``Paiement``.
 
 
