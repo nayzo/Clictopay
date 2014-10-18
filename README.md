@@ -1,25 +1,27 @@
 Clictopay SMT
 =====================
 
-**Clictopay SMT** est un Module **Prestashop** de paiement en ligne pour SPS Monétique Tunisie.
+**Clictopay SMT** est un Module **Prestashop** de paiement en ligne pour **SPS Monétique Tunisie**.
 
-Le Module est bilangue ``FR`` et ``EN``
+Le Module est bilingue ``FR`` et ``EN``
 
 Le Module **Clictopay SMT** est compatible avec la version **v1.5.0** ou ultèrieur de **Prestashop**
 
-TOUS DROITS RÉSERVÉS. Développé par **``Ala Eddine Khefifi``**
+TOUS DROITS RÉSERVÉS. Développé par ** ``Ala Eddine Khefifi`` **
+
 
 
 Installation
 ------------
 
-1. Téléchargez le .zip du module.
+1. Téléchargez le .zip du module depuis Github.
 
 2. Décompressez le module et renommez le dossier ``Clictopay-master``  à  ``clictopay``.
 
-3. Placez le dossier "clictopay" dans le dossier "modules" de votre projet de Prestashop.
+3. Placez le dossier ``clictopay`` dans le dossier ``modules`` de votre projet de Prestashop.
 
-4. Installez le Module depuis le back office de Prestashop, menu "Modules", section "Paiement".
+4. Installez le Module depuis le back office de Prestashop, menu ``Modules``, section ``Paiement``.
+
 
 
 Configuration
@@ -33,6 +35,7 @@ Afin de Configurer le Module:
 
 3. Remplissez le champ ``Affilie`` avec le Code d'adhésion à la plateforme SPS.
 
+4. Mettre à jour la configuration.
 
 
 ### Liens de Configuration:
@@ -57,8 +60,8 @@ http://www.domain.com/index.php?fc=module&module=clictopay&controller=echec
 Licence
 -------
 
-Ce Module est sous le licence BSD.
+Ce Module est sous le licence ``BSD``.
 
 TOUS DROITS RÉSERVÉS. Développé par **``Ala Eddine Khefifi``**
 
-Voir [LICENSE](https://github.com/NAYZO/Clictopay/LICENSE)
+Voir [LICENSE](https://github.com/NAYZO/Clictopay/blob/master/LICENSE)
