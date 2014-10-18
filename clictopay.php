@@ -1,19 +1,12 @@
 <?php
-/*----------------------------------------------------------------------------
-Auteur: Ala Eddine Khefifi
-Auteur E-Mail: alakhefifi@gmail.com
-Date: Janvier 2013
-Version : 1.0
 
-Module de paiement en ligne pour SPS Mon�tique Tunisie
-TOUS DROITS R�SERV�S.
+/*
+ * (c) Ala Eddine Khefifi <alakhefifi@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
-*                     Ala Eddine Khefifi                       *  
-****************************************************************	   
-*	       \ o / 
-*            |    
-*           / \  WWW.OVYNET.COM
------------------------------------------------------------------------------*/
 if (!defined('_PS_VERSION_'))
     exit;
 
@@ -47,7 +40,7 @@ class Clictopay extends PaymentModule
         parent::__construct();
 
         $this->displayName = 'Clictopay';
-        $this->description = 'Clictopay it\'s a Prestashop module for online paiement, it\'s based on the SPS Clictopay SMT, this module is developed by Ala Eddine Khefifi. Email: alakhefifi@gmail.com';
+        $this->description = $this->l('Clictopay it\'s a Prestashop module for online paiement, it\'s based on the SPS Clictopay SMT, this module is developed by Ala Eddine Khefifi. Email: alakhefifi@gmail.com');
         $this->confirmUninstall = $this->l('Are you sure you want to delete your details ?');
 
         if ((!isset($this->URL) || !isset($this->affilie) || empty($this->URL) || empty($this->affilie)))
@@ -109,7 +102,6 @@ class Clictopay extends PaymentModule
             Configuration::updateValue('URL', Tools::getValue('URL'));
             Configuration::updateValue('affilie', Tools::getValue('affilie'));
         }
-        //$this->_html .= '<div class="conf confirm"> '.$this->l('Settings updated').'</div>';
         $this->_html .= $this->displayConfirmation($this->l('Settings updated'));
     }
 
