@@ -57,7 +57,7 @@ class Clictopay extends PaymentModule
         if (!parent::install() || !$this->registerHook('payment'))
             return false;
         $sql = "CREATE TABLE IF NOT EXISTS `" . _DB_PREFIX_ . "clictopay`(
-            `id_nzoconfirm` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+            `id_clictopay` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
             `reference` VARCHAR(256) NOT NULL,
 			`param` INT(11) NOT NULL,
 			`cart` INT(11) NOT NULL,

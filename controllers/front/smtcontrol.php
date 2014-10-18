@@ -10,7 +10,7 @@
 /**
  * @since 1.5.0
  */
-class ClictopayControllerModuleFrontController extends ModuleFrontController
+class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
 {
     public function postProcess()
     {

@@ -48,6 +48,10 @@ Changez ``www.domain.com`` par votre nom de domain.
 
 
 ``` html
+//CONTROLE:
+
+http://www.domain.com/index.php?fc=module&module=clictopay&controller=smtcontrol
+
 // SUCCES:
 
 http://www.domain.com/index.php?fc=module&module=clictopay&controller=succes
