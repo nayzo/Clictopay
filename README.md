@@ -7,7 +7,7 @@ Le Module est bilingue ``FR`` et ``EN``
 
 Le Module **Clictopay SMT** est compatible avec la version **v1.5.0** ou ultèrieur de **Prestashop**
 
-TOUS DROITS RÉSERVÉS. Développé par **``**Ala Eddine Khefifi**``**
+TOUS DROITS RÉSERVÉS. Développé par **Ala Eddine Khefifi**
 
 
 
@@ -62,6 +62,6 @@ Licence
 
 Ce Module est sous le licence ``BSD``.
 
-TOUS DROITS RÉSERVÉS. Développé par **``Ala Eddine Khefifi``**
+TOUS DROITS RÉSERVÉS. Développé par **Ala Eddine Khefifi**
 
 Voir [LICENSE](https://github.com/NAYZO/Clictopay/blob/master/LICENSE)
