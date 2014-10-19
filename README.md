@@ -70,4 +70,4 @@ Ce Module est sous la licence ``BSD``.
 
 TOUS DROITS RÉSERVÉS. Développé par **Ala Eddine Khefifi**
 
-Voir [LICENSE](https://github.com/NAYZO/Clictopay/blob/master/LICENSE)
+Voir [LICENCE](https://github.com/NAYZO/Clictopay/blob/master/LICENSE)
