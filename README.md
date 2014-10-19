@@ -66,7 +66,7 @@ http://www.domain.com/index.php?fc=module&module=clictopay&controller=echec
 Licence
 -------
 
-Ce Module est sous le licence ``BSD``.
+Ce Module est sous la licence ``BSD``.
 
 TOUS DROITS RÉSERVÉS. Développé par **Ala Eddine Khefifi**
 
