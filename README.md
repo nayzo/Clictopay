@@ -5,7 +5,7 @@ Clictopay SMT
 
 - Le Module est bilingue ``FR`` et ``EN``
 
-- Le Module est compatible avec la version **v1.5.0** ou ultèrieur de **Prestashop**
+- Le Module est compatible avec la version **v1.5.0** ou **ultèrieur** de **Prestashop**
 
 - TOUS DROITS RÉSERVÉS. Développé par **Ala Eddine Khefifi**
 
@@ -61,6 +61,7 @@ http://www.domain.com/index.php?fc=module&module=clictopay&controller=succes
 http://www.domain.com/index.php?fc=module&module=clictopay&controller=echec
 
 ```
+
 
 
 Licence
