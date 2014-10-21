@@ -39,7 +39,7 @@ class Clictopay extends PaymentModule
 
         parent::__construct();
 
-        $this->displayName = 'Clictopay';
+        $this->displayName = 'Clictopay SMT';
         $this->description = $this->l('This module allows you to accept online payments based on the SPS Clictopay SMT. Developed by Ala Eddine Khefifi. Email: alakhefifi@gmail.com');
         $this->confirmUninstall = $this->l('Are you sure you want to delete your details ?');
 
