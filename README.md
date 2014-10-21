@@ -3,6 +3,8 @@ Clictopay SMT
 
 **Clictopay SMT** est un module **Prestashop** de paiement en ligne pour **SPS Monétique Tunisie**.
 
+- Le Module est totalement securisé
+
 - Le Module est bilingue ``FR`` et ``EN``
 
 - Le Module est compatible avec la version **v1.5.0** ou **ultèrieur** de **Prestashop**
