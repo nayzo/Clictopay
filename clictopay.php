@@ -133,7 +133,7 @@ class Clictopay extends PaymentModule
 
     public function getContent()
     {
-        $this->_html .= '<h1>' . $this->displayName . ' SMT </h1>';
+        $this->_html .= '<h1>' . $this->displayName . '</h1>';
 
         if (Tools::isSubmit('btnSubmit')) {
             $this->_postValidation();
