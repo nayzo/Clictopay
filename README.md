@@ -18,6 +18,8 @@ Installation
 
 1. Téléchargez le .zip du module depuis Github.
 
+![Alt text](logos/download.jpg?raw=true "Téléchargez le .zip")
+
 2. Décompressez le module et renommez le dossier ``Clictopay-master``  à  ``clictopay``.
 
 3. Placez le dossier ``clictopay`` dans le dossier ``modules`` de votre projet Prestashop.
