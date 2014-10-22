@@ -26,7 +26,7 @@ Installation
 
  Ou compressez (.zip) le dossier renommé et chargez le module depuis le back office de Prestashop.
 
-4. Installez le Module depuis le back office de Prestashop, menu ``Modules``, section ``Paiement``.
+4. Installez le Module depuis le back office de Prestashop, menu ``Modules``.
 
 
 
@@ -39,7 +39,7 @@ Afin de Configurer le Module:
 
 2. Remplissez le champ ``URL`` avec le lien de page de paiement de SPS Monétique Tunisie.
 
-3. Remplissez le champ ``Affilie`` avec le Code d'adhésion à la plateforme SPS.
+3. Remplissez le champ ``Affilie`` avec le code d'adhésion à la plateforme SPS.
 
 4. Mettre à jour la configuration.
 
