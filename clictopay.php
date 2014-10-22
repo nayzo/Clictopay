@@ -67,8 +67,10 @@ class Clictopay extends PaymentModule
 			`customer` VARCHAR(256) NOT NULL
 			)";
 
-        if (!Db::getInstance()->Execute($sql))
+        if (!Db::getInstance()->Execute($sql)) {
             return false;
+        }
+
         return true;
     }
 
