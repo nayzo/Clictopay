@@ -7,9 +7,6 @@
  * file that was distributed with this source code.
  */
 
-/**
- * @since 1.5.0
- */
 class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
 {
     public function postProcess()

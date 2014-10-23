@@ -74,7 +74,6 @@ class Clictopay extends PaymentModule
         return true;
     }
 
-
     public function uninstall()
     {
         if (!Configuration::deleteByName('URL') || !Configuration::deleteByName('affilie') || !parent::uninstall())
@@ -84,7 +83,6 @@ class Clictopay extends PaymentModule
             return false;
         return true;
     }
-
 
     private function _postValidation()
     {
@@ -96,8 +94,6 @@ class Clictopay extends PaymentModule
         }
     }
 
-
-    // configuration admin update
     private function _postProcess()
     {
         if (Tools::isSubmit('btnSubmit')) {
@@ -107,13 +103,11 @@ class Clictopay extends PaymentModule
         $this->_html .= $this->displayConfirmation($this->l('Settings updated'));
     }
 
-    // configuration Admin
     private function _displayCart()
     {
         return $this->display(__FILE__, 'infos.tpl');
     }
 
-    // configuration formulaire
     private function renderForm()
     {
         $this->_html .=
@@ -152,7 +146,6 @@ class Clictopay extends PaymentModule
         return $this->_html;
     }
 
-    // affichage dans la liste des types de paiements dans le front.  hook
     public function hookPayment($params)
     {
         if (!$this->active)
@@ -166,7 +159,6 @@ class Clictopay extends PaymentModule
         ));
         return $this->display(__FILE__, 'payment.tpl');
     }
-
 
     public function checkCurrency($cart)
     {

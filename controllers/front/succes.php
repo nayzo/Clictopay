@@ -7,18 +7,12 @@
  * file that was distributed with this source code.
  */
 
-/**
- * @since 1.5.0
- */
 include(dirname(__FILE__) . '../../clictopay.php');
 
 class ClictopaySuccesModuleFrontController extends ModuleFrontController
 {
     public $ssl = true;
 
-    /**
-     * @see FrontController::initContent()
-     */
     public function initContent()
     {
         parent::initContent();

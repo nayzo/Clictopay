@@ -9,9 +9,6 @@
 
 session_start();
 
-/**
- * @since 1.5.0
- */
 class ClictopayValidationModuleFrontController extends ModuleFrontController
 {
     public function postProcess()
