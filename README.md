@@ -67,15 +67,15 @@ Changez ``www.domain.com`` par votre nom de domaine.
 
 
 ``` html
-//CONTROLE:
+// Controle & Notification:
 
 http://www.domain.com/index.php?fc=module&module=clictopay&controller=smtcontrol
 
-// SUCCES:
+// Succes:
 
 http://www.domain.com/index.php?fc=module&module=clictopay&controller=succes
 
-// ECHEC:
+// Echec:
 
 http://www.domain.com/index.php?fc=module&module=clictopay&controller=echec
 
