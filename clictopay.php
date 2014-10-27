@@ -47,7 +47,7 @@ class Clictopay extends PaymentModule
             $this->warning = $this->l('The URL and the Affiliate fields must be configured in order to use this module correctly.');
         if (!count(Currency::checkPaymentCurrencies($this->id)))
             $this->warning = $this->l('No currency set for this module');
-        if ('localhost' === $_SERVER['SERVER_NAME'])
+        if ('localhost' === $_SERVER['HTTP_HOST'])
             $this->warning = $this->l('The payment cannot be executed on localhost');
 
     }
