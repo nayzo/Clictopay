@@ -17,5 +17,5 @@ $_MODULE['<{clictopay}prestashop>clictopay_bb166feff34b74fef81127259160c93a'] = 
 $_MODULE['<{clictopay}prestashop>clictopay_b17f3f4dcf653a5776792498a9b44d6a'] = 'Mettre à jour';
 $_MODULE['<{clictopay}prestashop>validation_e2b7dec8fa4b498156dfee6e4c84b156'] = 'Ce mode de paiement n\'est pas disponible.';
 $_MODULE['<{clictopay}prestashop>infos_03981556323dde9b096933c54c721594'] = 'Ce module vous permet d\'accepter les paiements en ligne par SPS Clictopay SMT.';
-$_MODULE['<{clictopay}prestashop>payment_25065e3ef9274f9b0e3088340f6d79e6'] = 'Payer par carte de crédit';
-$_MODULE['<{clictopay}prestashop>payment_0ca8e64998ba46e7a3bc1fe094735686'] = 'Payer par carte de crédit (e-dinar, MasterCard, ..)';
+$_MODULE['<{clictopay}prestashop>payment_d7e11762e2b2c2255bc37dcb039b9dcd'] = 'Paiement par carte de crédit';
+$_MODULE['<{clictopay}prestashop>payment_010ca9bcfa08bcb6673af0abfb70c075'] = 'Paiement par carte de crédit (e-dinar, MasterCard, ..)';
