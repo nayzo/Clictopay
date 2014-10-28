@@ -37,7 +37,6 @@ class Clictopay extends PaymentModule
             $this->affilie = $config['affilie'];
         }
 
-        $this->bootstrap = true;
         parent::__construct();
 
         $this->displayName = 'Clictopay SMT';
