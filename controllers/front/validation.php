@@ -52,6 +52,7 @@ class ClictopayValidationModuleFrontController extends ModuleFrontController
 
         $config = Configuration::getMultiple(array('URL', 'affilie'));
         $_SESSION['URL'] = $config['URL'];
+        $_SESSION['sid'] = $customerkey;
         $_SESSION['Reference'] = $reference;
         $_SESSION['Montant'] = $total;
         $_SESSION['affilie'] = $config['affilie'];
