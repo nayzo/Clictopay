@@ -22,7 +22,7 @@ class Clictopay extends PaymentModule
     {
         $this->name = 'clictopay';
         $this->tab = 'payments_gateways';
-        $this->version = '1.3.6';
+        $this->version = '1.4.0';
         $this->author = 'Ala Eddine Khefifi';
 
         $this->currencies = true;
@@ -37,6 +37,7 @@ class Clictopay extends PaymentModule
             $this->affilie = $config['affilie'];
         }
 
+        $this->bootstrap = true;
         parent::__construct();
 
         $this->displayName = 'Clictopay SMT';
