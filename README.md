@@ -10,7 +10,7 @@ Clictopay SMT
 
 - Bilingue ``FR`` et ``EN``
 
-- Compatible avec la version **v1.5.0** et **ultérieur** de **Prestashop**
+- Compatible avec la version **v1.5.0**  et  **ultérieur** de **Prestashop**
 
 - Accepte les paiements de différentes devises (TND, €, $).
 
