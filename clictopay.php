@@ -49,7 +49,6 @@ class Clictopay extends PaymentModule
             $this->warning = $this->l('No currency set for this module');
         if ('localhost' === $_SERVER['HTTP_HOST'])
             $this->warning = $this->l('The payment cannot be executed on localhost');
-
     }
 
     public function install()
@@ -165,10 +164,13 @@ class Clictopay extends PaymentModule
         $currency_order = new Currency((int)($cart->id_currency));
         $currencies_module = $this->getCurrency((int)$cart->id_currency);
 
-        if (is_array($currencies_module))
-            foreach ($currencies_module as $currency_module)
+        if (is_array($currencies_module)) {
+            foreach ($currencies_module as $currency_module) {
                 if ($currency_order->id == $currency_module['id_currency'])
                     return true;
+            }
+        }
+
         return false;
     }
 
