@@ -18,8 +18,14 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
         $ref = $_GET['Reference'];
         $act = $_GET['Action'];
 
-        if (!Db::getInstance()->getValue("SELECT `id_clictopay` FROM `" . _DB_PREFIX_ . "clictopay` WHERE `reference` = '$ref'"))
+        if (!Db::getInstance()->getValue("
+            SELECT `id_clictopay`
+            FROM `" . _DB_PREFIX_ . "clictopay`
+            WHERE `reference` = '$ref'")
+        ) {
             exit;
+        }
+
 
         switch ($act) {
             case "DETAIL":
