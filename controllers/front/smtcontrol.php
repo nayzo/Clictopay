@@ -43,7 +43,10 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
 
             case "ERREUR":
                 // access the database and update the transaction state
-                Db::getInstance()->execute("DELETE FROM `" . _DB_PREFIX_ . "clictopay` WHERE `reference` = '$ref'");
+                Db::getInstance()->execute("
+                    DELETE FROM `" . _DB_PREFIX_ . "clictopay`
+                    WHERE `reference` = '$ref'"
+                );
 
                 echo "Reference=$ref&Action=$act&Reponse=OK";
                 break;
