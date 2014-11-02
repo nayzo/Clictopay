@@ -19,9 +19,9 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
         $act = $_GET['Action'];
 
         if (!Db::getInstance()->getValue("
-            SELECT `id_clictopay`
-            FROM `" . _DB_PREFIX_ . "clictopay`
-            WHERE `reference` = '$ref'")
+                SELECT `id_clictopay`
+                FROM `" . _DB_PREFIX_ . "clictopay`
+                WHERE `reference` = '$ref'")
         ) {
             exit;
         }
@@ -60,18 +60,33 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
                         SELECT *
                         FROM `" . _DB_PREFIX_ . "clictopay`
                         WHERE `reference` = '$ref'");
+
                 foreach ($data as $row) {
                     $mailVars = array();
-                    $this->module->validateOrder($row['cart'], Configuration::get('PS_OS_PAYMENT'), $row['total'], $row['module'], NULL, $mailVars, $row['currency'], false, $row['customer']);
+                    $this->module->validateOrder($row['cart'],
+                        Configuration::get('PS_OS_PAYMENT'),
+                        $row['total'],
+                        $row['module'],
+                        NULL,
+                        $mailVars,
+                        $row['currency'],
+                        false,
+                        $row['customer']
+                    );
                 }
-                Db::getInstance()->execute("UPDATE `" . _DB_PREFIX_ . "clictopay` SET `param` = $par WHERE `reference` = '$ref'");
+
+                Db::getInstance()->execute("UPDATE `" . _DB_PREFIX_ . "clictopay`
+                    SET `param` = $par
+                    WHERE `reference` = '$ref'");
+
                 echo "Reference=$ref&Action=$act&Reponse=OK";
                 break;
 
 
             case "REFUS":
                 // access the database and update the transaction state
-                Db::getInstance()->execute("DELETE FROM `" . _DB_PREFIX_ . "clictopay` WHERE `reference` = '$ref'");
+                Db::getInstance()->execute("DELETE FROM `" . _DB_PREFIX_ . "clictopay`
+                    WHERE `reference` = '$ref'");
 
                 echo "Reference=$ref&Action=$act&Reponse=OK";
                 break;
@@ -79,11 +94,11 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
 
             case "ANNULATION":
                 // access the database and update the transaction state
-                Db::getInstance()->execute("DELETE FROM `" . _DB_PREFIX_ . "clictopay` WHERE `reference` = '$ref'");
+                Db::getInstance()->execute("DELETE FROM `" . _DB_PREFIX_ . "clictopay`
+                    WHERE `reference` = '$ref'");
 
                 echo "Reference=$ref&Action=$act&Reponse=OK";
                 break;
-
         }
         exit;
     }
