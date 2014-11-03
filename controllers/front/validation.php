@@ -23,8 +23,6 @@ class ClictopayValidationModuleFrontController extends ModuleFrontController
             Tools::redirect('index.php?controller=order&step=1');
         }
 
-
-        // Check that this payment option is still available in case the customer changed his address just before the end of the checkout process
         $authorized = false;
         foreach (Module::getPaymentModules() as $module)
             if ($module['name'] == 'clictopay') {
@@ -58,7 +56,9 @@ class ClictopayValidationModuleFrontController extends ModuleFrontController
         $_SESSION['affilie'] = $config['affilie'];
         $_SESSION['Devise'] = $currency->iso_code;
 
-        Db::getInstance()->execute("INSERT INTO " . _DB_PREFIX_ . "clictopay (reference,cart,total,module,currency,customer) VALUES ('$reference','$cartid','$total','$name','$currencyid','$customerkey')");
+        Db::getInstance()->execute("INSERT INTO " . _DB_PREFIX_ . "clictopay
+            (reference,cart,total,module,currency,customer)
+            VALUES ('$reference','$cartid','$total','$name','$currencyid','$customerkey')");
 
         Tools::redirect('index.php?fc=module&module=clictopay&controller=order');
 

@@ -29,6 +29,7 @@ class Clictopay extends PaymentModule
         $this->currencies_mode = 'checkbox';
 
         $config = Configuration::getMultiple(array('URL', 'affilie'));
+
         if (isset($config['URL'])) {
             $this->URL = $config['URL'];
         }
@@ -45,8 +46,10 @@ class Clictopay extends PaymentModule
 
         if ((!isset($this->URL) || !isset($this->affilie) || empty($this->URL) || empty($this->affilie)))
             $this->warning = $this->l('The URL and the Affiliate fields must be configured in order to use this module correctly.');
+
         if (!count(Currency::checkPaymentCurrencies($this->id)))
             $this->warning = $this->l('No currency set for this module');
+
         if ('localhost' === $_SERVER['HTTP_HOST'])
             $this->warning = $this->l('The payment cannot be executed on localhost');
     }
@@ -55,6 +58,7 @@ class Clictopay extends PaymentModule
     {
         if (!parent::install() || !$this->registerHook('payment'))
             return false;
+
         $sql = "CREATE TABLE IF NOT EXISTS `" . _DB_PREFIX_ . "clictopay`(
             `id_clictopay` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
             `reference` VARCHAR(256) NOT NULL,
@@ -77,9 +81,12 @@ class Clictopay extends PaymentModule
     {
         if (!Configuration::deleteByName('URL') || !Configuration::deleteByName('affilie') || !parent::uninstall())
             return false;
+
         $sql = "DROP TABLE IF EXISTS `" . _DB_PREFIX_ . "clictopay`";
+
         if (!Db::getInstance()->Execute($sql))
             return false;
+
         return true;
     }
 
@@ -99,6 +106,7 @@ class Clictopay extends PaymentModule
             Configuration::updateValue('URL', Tools::getValue('URL'));
             Configuration::updateValue('affilie', Tools::getValue('affilie'));
         }
+
         $this->_html .= $this->displayConfirmation($this->l('Settings updated'));
     }
 
@@ -132,6 +140,7 @@ class Clictopay extends PaymentModule
 
         if (Tools::isSubmit('btnSubmit')) {
             $this->_postValidation();
+
             if (!count($this->_postErrors))
                 $this->_postProcess();
             else
@@ -149,6 +158,7 @@ class Clictopay extends PaymentModule
     {
         if (!$this->active)
             return;
+
         if (!$this->checkCurrency($params['cart']))
             return;
 
@@ -156,6 +166,7 @@ class Clictopay extends PaymentModule
             'this_path' => $this->_path,
             'this_path_ssl' => Tools::getShopDomainSsl(true, true) . __PS_BASE_URI__ . 'modules/' . $this->name . '/'
         ));
+
         return $this->display(__FILE__, 'payment.tpl');
     }
 
@@ -173,5 +184,4 @@ class Clictopay extends PaymentModule
 
         return false;
     }
-
 }

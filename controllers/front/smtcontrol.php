@@ -19,9 +19,9 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
         $act = $_GET['Action'];
 
         if (!Db::getInstance()->getValue("
-                SELECT `id_clictopay`
-                FROM `" . _DB_PREFIX_ . "clictopay`
-                WHERE `reference` = '$ref'")
+            SELECT `id_clictopay`
+            FROM `" . _DB_PREFIX_ . "clictopay`
+            WHERE `reference` = '$ref'")
         ) {
             exit;
         }
@@ -31,9 +31,9 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
             case "DETAIL":
                 // access the database, and retrieve the amount
                 $montant = Db::getInstance()->getValue("
-                        SELECT `total`
-                        FROM `" . _DB_PREFIX_ . "clictopay`
-                        WHERE `reference` = '$ref'");
+                    SELECT `total`
+                    FROM `" . _DB_PREFIX_ . "clictopay`
+                    WHERE `reference` = '$ref'");
                 if (empty($montant))
                     exit;
 
@@ -57,9 +57,9 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
                 $par = $_GET['Param'];
 
                 $data = Db::getInstance()->executeS("
-                        SELECT *
-                        FROM `" . _DB_PREFIX_ . "clictopay`
-                        WHERE `reference` = '$ref'");
+                    SELECT *
+                    FROM `" . _DB_PREFIX_ . "clictopay`
+                    WHERE `reference` = '$ref'");
 
                 foreach ($data as $row) {
                     $mailVars = array();
@@ -100,7 +100,7 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
                 echo "Reference=$ref&Action=$act&Reponse=OK";
                 break;
         }
+
         exit;
     }
-
 }

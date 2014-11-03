@@ -21,6 +21,14 @@ class ClictopaySuccesModuleFrontController extends ModuleFrontController
         $cart = $context->cart;
         $clictopay = new Clictopay();
         $customer = new Customer($cart->id_customer);
-        Tools::redirect('index.php?controller=order-confirmation&id_cart=' . (int)($cart->id) . '&id_module=' . (int)($clictopay->id) . '&id_order=' . $clictopay->currentOrder . '&key=' . $customer->secure_key);
+        Tools::redirect('index.php?controller=order-confirmation&id_cart='
+            . (int)($cart->id)
+            . '&id_module='
+            . (int)($clictopay->id)
+            . '&id_order='
+            . $clictopay->currentOrder
+            . '&key='
+            . $customer->secure_key
+        );
     }
 }
