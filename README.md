@@ -31,7 +31,7 @@ Installation
 
 3. Décompressez le module et renommez le dossier ``Clictopay-master``  à  ``clictopay``.
 
-4. Compressez (.zip) le dossier renommé (clictopay).
+4. Compressez (.zip) le dossier renommé ``clictopay`` (résultat: clictopay.zip).
 
 5. Chargez le module ``clictopay.zip`` depuis le back office de Prestashop, menu ``Modules``.
 
