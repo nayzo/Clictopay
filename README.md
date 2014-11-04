@@ -35,7 +35,7 @@ Installation
 
 5. Chargez le module ``clictopay.zip`` depuis le back office de Prestashop, menu ``Modules``.
 
-6. Installez le Module ``Clictopay SMT`` depuis le back office de Prestashop, menu ``Modules``.
+6. Installez le module ``Clictopay SMT`` depuis le back office de Prestashop, menu ``Modules``.
 
 
 
