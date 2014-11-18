@@ -42,8 +42,6 @@ Installation
 Configuration
 -------------
 
-Afin de Configurer le Module:
-
 1. Cliquez sur le bouton ``Configurer`` du module ``Clictopay SMT``.
 
 2. Remplissez le champ ``URL`` avec le lien de page de paiement de SPS Monétique Tunisie.
