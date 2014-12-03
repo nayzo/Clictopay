@@ -62,7 +62,7 @@ class Clictopay extends PaymentModule
         $sql = "CREATE TABLE IF NOT EXISTS `" . _DB_PREFIX_ . "clictopay`(
             `id_clictopay` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
             `reference` VARCHAR(256) NOT NULL,
-			`param` INT(11) NOT NULL,
+			`param` VARCHAR(256),
 			`cart` INT(11) NOT NULL,
 			`total` FLOAT(11) NOT NULL,
 			`module` VARCHAR(256) NOT NULL,

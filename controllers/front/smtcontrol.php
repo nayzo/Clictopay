@@ -54,7 +54,7 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
 
             case "ACCORD":
                 // access the database, register the authorization number (in param)
-                $par = $_GET['Param'];
+                $par = (isset($_GET['Param'])) ? $_GET['Param'] : '';
 
                 $data = Db::getInstance()->executeS("
                     SELECT *
