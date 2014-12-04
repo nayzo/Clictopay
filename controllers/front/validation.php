@@ -40,7 +40,7 @@ class ClictopayValidationModuleFrontController extends ModuleFrontController
 
         $currency = $this->context->currency;
         $total = (float)$cart->getOrderTotal(true, Cart::BOTH);
-
+        $total = sprintf('%.3f', $total);
 
         $cartid = (int)$cart->id;
         $name = $this->module->displayName;
