@@ -37,6 +37,7 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
                 if (empty($montant))
                     exit;
 
+                $montant = sprintf('%.3f', $montant);
                 echo "Reference=$ref&Action=$act&Reponse=$montant";
                 break;
 
