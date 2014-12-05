@@ -28,6 +28,7 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
 
 
         switch ($act) {
+
             case "DETAIL":
                 // access the database, and retrieve the amount
                 $montant = Db::getInstance()->getValue("
@@ -55,7 +56,6 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
 
             case "ACCORD":
                 // access the database, register the authorization number (in param)
-                $par = (isset($_GET['Param'])) ? $_GET['Param'] : '';
 
                 $data = Db::getInstance()->executeS("
                     SELECT *
@@ -76,9 +76,12 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
                     );
                 }
 
-                Db::getInstance()->execute("UPDATE `" . _DB_PREFIX_ . "clictopay`
-                    SET `param` = $par
+                $param = $_GET['Param'];
+                if (isset($param)) {
+                    Db::getInstance()->execute("UPDATE `" . _DB_PREFIX_ . "clictopay`
+                    SET `param` = '$param'
                     WHERE `reference` = '$ref'");
+                }
 
                 echo "Reference=$ref&Action=$act&Reponse=OK";
                 break;
