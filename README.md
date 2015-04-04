@@ -48,7 +48,7 @@ Configuration
 
 3. Remplissez le champ ``Affilie`` avec le code d'adhésion à la plateforme SPS.
 
-4. Mettre à jour la configuration.
+4. Mettez à jour la configuration.
 
 
 ### Liens de Configuration:
