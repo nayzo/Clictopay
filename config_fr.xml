@@ -2,7 +2,7 @@
 <module>
     <name>clictopay</name>
     <displayName><![CDATA[Clictopay]]></displayName>
-    <version><![CDATA[1.4.0]]></version>
+    <version><![CDATA[1.4.1]]></version>
     <description>
         <![CDATA[Ce module vous permet d&#039;accepter des paiements en ligne bas&eacute; sur le SPS Clictopay SMT, D&eacute;velopp&eacute; par Ala Eddine Khefifi. Email: alakhefifi@gmail.com]]></description>
     <author><![CDATA[Ala Eddine Khefifi]]></author>
