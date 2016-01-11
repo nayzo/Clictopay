@@ -29,7 +29,7 @@ Installation
 
 3. Décompressez le module ``Clictopay-master.zip``
 
-4. Renommez le dossier ``Clictopay-master``  à  ``clictopay``
+4. Renommez le dossier ``Clictopay-master``  à  ``clictopay`` (**Attention tout est en minuscule!**).
 
 5. Compressez (.zip) le dossier renommé ``clictopay`` (Résultat: clictopay.zip).
 
