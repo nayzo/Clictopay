@@ -10,7 +10,7 @@ Clictopay SMT
 
 - Bilingue ``FR`` et ``EN``
 
-- Compatible avec la version **v1.5.0**  et  **ultérieur** de **Prestashop**
+- Compatible avec la version **v1.5.0**  et  **ultérieur** de **Prestashop** (v1.5 / v1.6 / ...)
 
 - Accepte les paiements de différentes devises (TND, €, $).
 
@@ -44,7 +44,7 @@ Configuration
 
 1. Cliquez sur le bouton ``Configurer`` du module ``Clictopay SMT``.
 
-2. Remplissez le champ ``URL`` avec le lien de page de paiement de SPS Monétique Tunisie.
+2. Remplissez le champ ``URL`` avec le lien de page de paiement de SPS Monétique Tunisie :  (i.e: https://www.smt-sps.com.tn/clicktopay).
 
 3. Remplissez le champ ``Affilie`` avec le code d'adhésion à la plateforme SPS.
 

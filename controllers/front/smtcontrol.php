@@ -27,7 +27,7 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
         }
 
 
-        switch ($act) {
+        switch (strtoupper($act)) {
 
             case "DETAIL":
                 // access the database, and retrieve the amount
@@ -41,18 +41,6 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
                 $montant = sprintf('%.3f', $montant);
                 echo "Reference=$ref&Action=$act&Reponse=$montant";
                 break;
-
-
-            case "ERREUR":
-                // access the database and update the transaction state
-                Db::getInstance()->execute("
-                    DELETE FROM `" . _DB_PREFIX_ . "clictopay`
-                    WHERE `reference` = '$ref'"
-                );
-
-                echo "Reference=$ref&Action=$act&Reponse=OK";
-                break;
-
 
             case "ACCORD":
                 // access the database, register the authorization number (in param)
@@ -87,19 +75,13 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
                 break;
 
 
+            case "ERREUR":
             case "REFUS":
-                // access the database and update the transaction state
-                Db::getInstance()->execute("DELETE FROM `" . _DB_PREFIX_ . "clictopay`
-                    WHERE `reference` = '$ref'");
-
-                echo "Reference=$ref&Action=$act&Reponse=OK";
-                break;
-
-
             case "ANNULATION":
                 // access the database and update the transaction state
                 Db::getInstance()->execute("DELETE FROM `" . _DB_PREFIX_ . "clictopay`
-                    WHERE `reference` = '$ref'");
+                    WHERE `reference` = '$ref'"
+                );
 
                 echo "Reference=$ref&Action=$act&Reponse=OK";
                 break;
