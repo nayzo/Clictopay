@@ -7,8 +7,9 @@
  * file that was distributed with this source code.
  */
 
-if (!defined('_PS_VERSION_'))
+if (!defined('_PS_VERSION_')) {
     exit;
+}
 
 class Clictopay extends PaymentModule
 {
@@ -44,14 +45,17 @@ class Clictopay extends PaymentModule
         $this->description = $this->l('This module allows you to accept online payments based on the SPS Clictopay SMT. Developed by Ala Eddine Khefifi. Email: alakhefifi@gmail.com');
         $this->confirmUninstall = $this->l('Are you sure you want to delete your details ?');
 
-        if ((!isset($this->URL) || !isset($this->affilie) || empty($this->URL) || empty($this->affilie)))
+        if ((!isset($this->URL) || !isset($this->affilie) || empty($this->URL) || empty($this->affilie))) {
             $this->warning = $this->l('The URL and the Affiliate fields must be configured in order to use this module correctly.');
+        }
 
-        if (!count(Currency::checkPaymentCurrencies($this->id)))
+        if (!count(Currency::checkPaymentCurrencies($this->id))) {
             $this->warning = $this->l('No currency set for this module');
+        }
 
-        if ('localhost' === $_SERVER['HTTP_HOST'])
+        if ('localhost' === $_SERVER['HTTP_HOST']) {
             $this->warning = $this->l('The payment cannot be executed on localhost');
+        }
     }
 
     public function install()
@@ -79,13 +83,15 @@ class Clictopay extends PaymentModule
 
     public function uninstall()
     {
-        if (!Configuration::deleteByName('URL') || !Configuration::deleteByName('affilie') || !parent::uninstall())
+        if (!Configuration::deleteByName('URL') || !Configuration::deleteByName('affilie') || !parent::uninstall()) {
             return false;
+        }
 
         $sql = "DROP TABLE IF EXISTS `" . _DB_PREFIX_ . "clictopay`";
 
-        if (!Db::getInstance()->Execute($sql))
+        if (!Db::getInstance()->Execute($sql)) {
             return false;
+        }
 
         return true;
     }
@@ -93,10 +99,11 @@ class Clictopay extends PaymentModule
     private function _postValidation()
     {
         if (Tools::isSubmit('btnSubmit')) {
-            if (!Tools::getValue('URL'))
+            if (!Tools::getValue('URL')) {
                 $this->_postErrors[] = $this->l('The URL field is empty!');
-            elseif (!Tools::getValue('affilie'))
+            } elseif (!Tools::getValue('affilie')) {
                 $this->_postErrors[] = $this->l('The Affiliate field is empty!');
+            }
         }
     }
 
@@ -141,11 +148,13 @@ class Clictopay extends PaymentModule
         if (Tools::isSubmit('btnSubmit')) {
             $this->_postValidation();
 
-            if (!count($this->_postErrors))
+            if (!count($this->_postErrors)) {
                 $this->_postProcess();
-            else
-                foreach ($this->_postErrors as $err)
+            } else {
+                foreach ($this->_postErrors as $err) {
                     $this->_html .= $this->displayError($err);
+                }
+            }
         }
 
         $this->_html .= $this->_displayCart();
@@ -156,11 +165,13 @@ class Clictopay extends PaymentModule
 
     public function hookPayment($params)
     {
-        if (!$this->active)
+        if (!$this->active) {
             return;
+        }
 
-        if (!$this->checkCurrency($params['cart']))
+        if (!$this->checkCurrency($params['cart'])) {
             return;
+        }
 
         $this->smarty->assign(array(
             'this_path' => $this->_path,
@@ -177,8 +188,9 @@ class Clictopay extends PaymentModule
 
         if (is_array($currencies_module)) {
             foreach ($currencies_module as $currency_module) {
-                if ($currency_order->id == $currency_module['id_currency'])
+                if ($currency_order->id == $currency_module['id_currency']) {
                     return true;
+                }
             }
         }
 
