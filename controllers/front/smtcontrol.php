@@ -11,9 +11,9 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
 {
     public function postProcess()
     {
-
-        if (empty($_GET['Reference']) || empty($_GET['Action']))
+        if (empty($_GET['Reference']) || empty($_GET['Action'])) {
             exit;
+        }
 
         $ref = $_GET['Reference'];
         $act = $_GET['Action'];
@@ -26,7 +26,6 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
             exit;
         }
 
-
         switch (strtoupper($act)) {
 
             case "DETAIL":
@@ -35,8 +34,9 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
                     SELECT `total`
                     FROM `" . _DB_PREFIX_ . "clictopay`
                     WHERE `reference` = '$ref'");
-                if (empty($montant))
+                if (empty($montant)) {
                     exit;
+                }
 
                 $montant = sprintf('%.3f', $montant);
                 echo "Reference=$ref&Action=$act&Reponse=$montant";
@@ -73,7 +73,6 @@ class ClictopaySmtcontrolModuleFrontController extends ModuleFrontController
 
                 echo "Reference=$ref&Action=$act&Reponse=OK";
                 break;
-
 
             case "ERREUR":
             case "REFUS":

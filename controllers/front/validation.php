@@ -61,6 +61,5 @@ class ClictopayValidationModuleFrontController extends ModuleFrontController
             VALUES ('$reference','$cartid','$total','$name','$currencyid','$customerkey')");
 
         Tools::redirect('index.php?fc=module&module=clictopay&controller=order');
-
     }
 }
