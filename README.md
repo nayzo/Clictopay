@@ -25,7 +25,7 @@ Installation
 
 1. Téléchargez le .zip du module depuis Github
 
-2. ![Alt text](logos/download.jpg?raw=true "Téléchargez le .zip")
+2. Lien: https://github.com/nayzo/Clictopay/archive/refs/tags/1.0.0.zip
 
 3. Décompressez le module ``Clictopay-master.zip``
 
