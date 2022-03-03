@@ -27,9 +27,9 @@ Installation
 
 2. Lien: https://github.com/nayzo/Clictopay/archive/refs/tags/1.0.0.zip
 
-3. Décompressez le module ``Clictopay-master.zip``
+3. Décompressez le module ``Clictopay-x.x.x.zip``
 
-4. Renommez le dossier ``Clictopay-master``  à  ``clictopay`` (**Attention tout est en minuscule!**).
+4. Renommez le dossier ``Clictopay-x.x.x``  à  ``clictopay`` (**Attention tout est en minuscule!**).
 
 5. Compressez (.zip) le dossier renommé ``clictopay`` (Résultat: clictopay.zip).
 
